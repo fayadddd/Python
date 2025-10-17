@@ -1,0 +1,139 @@
+
+
+# Dander function LAW
+'''
+
+a+b              a__add__(b)              # additon
+a-b              a__sub__(b)              # subtraction
+
+a*b              a__mul____(b)            # multification           
+a/b              a__truediv____(b)        # divition
+a%b              a__add____(b)            #additon
+
+'''
+
+# Exception method
+
+try:
+    a = int (input("Hey, Enter a number: "))
+    print(a)
+
+except Exception as e:
+    print(e)
+
+print("thank you")
+
+
+
+# try method with else mathod
+
+try:
+    a = int (input("Hey, Enter a number: "))
+    print(a)
+
+except Exception as e:
+    print(e)
+
+else:
+    print("Iam inside else")
+
+print("thank you")
+
+
+
+# Try method with FInaly
+
+def main():
+    try:
+        a = int (input("Hey, Enter a number: "))
+        print(a)
+
+    except Exception as e:
+        print(e)
+
+    finally:
+        print("Iam inside finnaly")
+
+main()
+
+
+
+# rasising Exceptions
+
+a = int(input("Enter a Number:"))
+b = int(input("Enter 2nd Number:"))
+
+if(b == 0):
+    raise ZeroDivisionError("Hey, our program in not meant to divide numbers by zero(0)")
+
+else:
+    print(f"the division a/b is {a/b}")
+
+
+
+# using walrus operator
+
+if (n := len([1,2,3,4,5])) > 3:
+    print(f"List is too long ({n} elements, expend <=3)")
+
+
+
+# Typing mathod
+
+from typing import List, Tuple, Dict, Union
+# List of integers
+number: List[int] = [1,2,3,4,5]
+# Tuple of a string and an intrger
+person: Tuple[str,int] = ("Alice", 30)
+# Dicctionary with string keys and interger values
+scores: Dict[str,int] = {"Alice": 90, "box": 30}
+# union type for variables that can hold multiple types
+indentifier: Union[int,str] = "ID123"
+indentifier = 12345 # Also velid
+
+
+
+# match case
+
+def http_status(status):
+    match status:
+        case 200:
+            return "Ok"
+        case 404:
+            return "Not found"
+        case 500:
+            return "Internate Server Error"
+        case _:
+            return "Unknown status"
+
+print(http_status(200))
+print(http_status(404))
+print(http_status(500))
+print(http_status(689)) 
+
+
+
+# Multiple files access
+'''
+with (
+    open('game.txt') as f1,
+    open('log.txt') as f2
+):   '''
+
+
+# enumerate
+
+liste = [22,33,44,56,77]
+
+for X, item in enumerate(liste):
+    print(f"The item number at X {X} is {item}")
+
+
+
+# list comphrehensions
+
+mylist = [1,2,3,4,5,6]   
+
+squaredlist = [ item*item for item in mylist]
+
+print(squaredlist)
